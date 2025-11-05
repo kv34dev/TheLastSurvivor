@@ -1,6 +1,8 @@
 # Shooter game on Python
 A shooter game on Python can be created using various libraries and frameworks such as Pygame, PyOpenGL, and Panda3D. Here is a basic description of how a shooter game can be implemented using Pygame:
 
+![Screenshot](https://github.com/kv34dev/shooter/blob/main/screenshot.png)
+
 The objective of the game is for the player to shoot down all the enemies that are attacking them. The player controls a character that can move in any direction using the arrow keys and shoot using the spacebar. The enemies move towards the player and shoot back at them, and the player must avoid getting hit by enemy bullets while taking down as many enemies as possible.
 
 To create the game, the Pygame library can be used to handle the graphics, audio, and input. The game can be divided into different states, such as the menu state, the game state, and the game over state. The menu state displays the title of the game and allows the player to start the game or quit. The game state contains the actual gameplay, where the player can move and shoot while the enemies move and attack. The game over state is displayed when the player loses all their health and the game ends.
