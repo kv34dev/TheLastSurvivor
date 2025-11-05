@@ -5,7 +5,7 @@ from pygame.math import Vector2
 width = 1000                    # ширина игрового окна
 height = 1000                   # высота игрового окна
 fps = 40                        # частота кадров в секунду
-gameName = "MetroLublino"       # название нашей игры
+gameName = "Shooter Game"       # название нашей игры
 
 pygame.init()                   # Инициализируем модуль pygame
 pygame.mixer.init()
