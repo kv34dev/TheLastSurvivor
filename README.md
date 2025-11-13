@@ -1,4 +1,4 @@
-# Shooter game on Python
+# The Last Survivor
 A shooter game on Python can be created using various libraries and frameworks such as Pygame, PyOpenGL, and Panda3D. Here is a basic description of how a shooter game can be implemented using Pygame:
 
 <img width="1112" height="1140" alt="image" src="https://github.com/user-attachments/assets/3a77e7fb-64ad-45da-bfe4-c12c2b8dde70" />
