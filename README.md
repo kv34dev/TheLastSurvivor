@@ -1,15 +1,94 @@
 # The Last Survivor
-A shooter game on Python can be created using various libraries and frameworks such as Pygame, PyOpenGL, and Panda3D. Here is a basic description of how a shooter game can be implemented using Pygame:
+The Last Survivor is a top-down 2D shooter built with Python + Pygame.
+
+You control a rotating character who must survive waves of enemies coming from different sides of the map. Shoot, dodge, reload, and stay alive as long as you can.
 
 <img width="1112" height="1140" alt="image" src="https://github.com/user-attachments/assets/3a77e7fb-64ad-45da-bfe4-c12c2b8dde70" />
 
 
-The objective of the game is for the player to shoot down all the enemies that are attacking them. The player controls a character that can move in any direction using the arrow keys and shoot using the spacebar. The enemies move towards the player and shoot back at them, and the player must avoid getting hit by enemy bullets while taking down as many enemies as possible.
+## Features
 
-To create the game, the Pygame library can be used to handle the graphics, audio, and input. The game can be divided into different states, such as the menu state, the game state, and the game over state. The menu state displays the title of the game and allows the player to start the game or quit. The game state contains the actual gameplay, where the player can move and shoot while the enemies move and attack. The game over state is displayed when the player loses all their health and the game ends.
+### Player
+- 360° rotation
+- Smooth movement with vector direction
+- Health bar with color indicators (green → yellow → red)
 
-The player's character and the enemies can be represented using sprites, which are images that can be animated and moved around the screen. The collision detection can be implemented to check if the player's bullets hit an enemy or if an enemy's bullets hit the player. Sound effects can be added to the game to enhance the player's experience.
+### Shooting System
+- Bullets fly in the direction of the player's current rotation
+- Magazine system (10 bullets by default)
+- Reload mechanic (`R` adds 15 bullets)
+- Explosion animation on grenade hit
+- Shooting sound effects
 
-As the player progresses through the game, the enemies can become more challenging, with different types of enemies having different behaviors and abilities. The game can also include power-ups that the player can collect, such as health packs or better weapons.
+### Enemy Types
+- **Left-side grenadier**  
+  - Throws/acts like a rotating grenade  
+  - Explodes on contact  
+- **Top zombies**  
+  - Animated  
+  - HP bar  
+- **Right-side fast zombies**
 
-Overall, creating a shooter game on Python can be a fun and rewarding experience, and there are many possibilities for customizing the game and making it unique.
+### Collision System
+- Player takes damage on enemy/grenade hit
+- Enemies take bullet damage
+- Dead enemies play death sounds and disappear
+
+### Sound System
+- Background music  
+- Shooting sound  
+- Attack / death sounds  
+- Explosion sound
+
+## Controls
+
+| Key | Action |
+|-----|--------|
+| ← / → | Rotate left / right |
+| ↑ / ↓ | Move forward / backward |
+| **SPACE** | Shoot |
+| **R** | Reload (+15 bullets) |
+| **ESC** / Window Close | Quit the game |
+
+## Project Structure
+```
+TheLastSurvivor
+│  main.py
+│  calibry]i.ttf
+│  README.md
+│
+├─ media
+│  ├─ img
+│  │   ├─ player/
+│  │   ├─ enemy1/
+│  │   ├─ enemy2/
+│  │   ├─ enemy5/
+│  │   ├─ explosion/
+│  │   ├─ shell.png
+│  │   └─ bg2.jpg
+│  └─ snd
+│      ├─ Music.wav
+│      ├─ shoot.wav
+│      ├─ blow.wav
+│      ├─ zombie_attack.wav
+│      └─ zombie_death1.wav
+
+```
+
+## Requirements
+
+- Python **3.8+**
+- **Pygame**
+
+Install dependencies:
+
+```
+pip install pygame
+```
+
+## Running
+
+From the project root:
+```
+python main.py
+```
